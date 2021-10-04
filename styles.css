@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.content {
+    height: 100vh;
+    width: 100vw;
+}
+.image-container {
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "titleLL titleL title titleR titleRR"
+                         "outerleft leftside main rightside outerright"
+                         "outerimagenavleft imagenavleft imagenavmid imagenavright outerimagenavright"
+                         "foot foot foot foot foot";
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    grid-template-rows: 15% 70% 7.5% 7.5%;
+}
+.left {
+    grid-area: leftside;
+    background-color: aqua;
+}
+.left-arrow {
+    grid-area: main;
+    justify-self: normal;
+    align-self: center;
+    color: #fff;
+    margin-left: 5px;
+    width: 20px;
+}
+.left-arrow:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+.main-image {
+    grid-area: main;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+.premBadgeL {
+    grid-area: titleL;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.title {
+    grid-area: title;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+.premBadgeR {
+    grid-area: titleR;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+/* .iDiv {
+    height: 100%;
+    width: 100%;
+} */
+.main-pic {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.slide {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    animation: 1s ease-in 0s 1 picSlide;
+}
+@keyframes picSlide {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.right-arrow {
+    color: #fff;
+    grid-area: main;
+    justify-self: right;
+    align-self: center;
+    margin-right: 5px;
+    width: 20px;
+}
+.right-arrow:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    opacity: 0.6;
+}
+.right {
+    grid-area: rightside;
+    background-color: aqua;
+}
+.left-circles {
+    grid-area: imagenavleft;
+    background-color: yellow;
+}
+.mid-circles {
+    grid-area: imagenavmid;
+    /* background-color: deepskyblue; */
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+}
+.dots {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    /* background-color: #bba; */
+    /* margin: auto; */
+    align-self: center;
+    justify-self: center;
+    opacity: 0.7;
+    margin: 2px;
+}
+.right-circles {
+    grid-area: imagenavright;
+    background-color: yellow;
+}
+.foot {
+    height: 12vh;
+    width: 100vw;
+    background-color: violet;
+}
+
+@media screen and (max-width: 600px) {
+    
+.content {
+    height: 100vh;
+    width: 100vw;
+}
+.image-container {
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "titleLL titleL title titleR titleRR"
+                         "outerleft leftside main rightside outerright"
+                         "outerimagenavleft imagenavleft imagenavmid imagenavright outerimagenavright"
+                         "foot foot foot foot foot";
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    grid-template-rows: 15% 70% 7.5% 7.5%;
+}
+.left {
+    grid-area: leftside;
+    background-color: aqua;
+}
+.left-arrow {
+    grid-area: main;
+    justify-self: normal;
+    align-self: center;
+    color: #fff;
+    margin-left: 5px;
+    width: 20px;
+}
+.left-arrow:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+.main-image {
+    grid-area: main;
+    background-color: blue;
+    height: 80%;
+    width: 100%;
+}
+.premBadgeL {
+    grid-area: titleL;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.title {
+    grid-area: title;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+}
+.premBadgeR {
+    grid-area: titleR;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+/* .iDiv {
+    height: 100%;
+    width: 100%;
+} */
+.main-pic {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+.slide {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+
+    animation: 1s ease-in 0s 1 picSlide;
+}
+@keyframes picSlide {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.right-arrow {
+    color: #fff;
+    grid-area: main;
+    justify-self: right;
+    align-self: center;
+    margin-right: 5px;
+    width: 20px;
+}
+.right-arrow:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    opacity: 0.6;
+}
+.right {
+    grid-area: rightside;
+    background-color: aqua;
+}
+.left-circles {
+    grid-area: imagenavleft;
+    background-color: yellow;
+}
+.mid-circles {
+    grid-area: imagenavmid;
+    background-color: deepskyblue;
+}
+.dots {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    /* background-color: #bba; */
+    /* margin: auto; */
+    align-self: center;
+    justify-self: center;
+    opacity: 0.7;
+    margin: 2px;
+}
+.right-circles {
+    grid-area: imagenavright;
+    background-color: yellow;
+}
+.foot {
+    height: 12vh;
+    width: 100vw;
+    background-color: violet;
+}
+
+}
